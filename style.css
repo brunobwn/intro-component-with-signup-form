@@ -25,11 +25,15 @@ body {
   background-image: url("/images/bg-intro-mobile.png");
   background-position: center;
   padding: 1.5em;
+  min-height: 100vh;
 }
 
 main {
+  width: 100%;
+  min-height: calc(100vh - 3em);
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 section.landing-text {
@@ -38,6 +42,7 @@ section.landing-text {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  margin-bottom: 3em;
 }
 
 .trial-btn {
@@ -56,7 +61,7 @@ section.landing-text {
 .form-container {
   background-color: white;
   width: 100%;
-  padding: 1.5em 2em;
+  padding: 1.5em;
   border-radius: 0.7em;
   box-shadow: 0 0.5em 00 rgba(0, 0, 0, 0.15);
   color: var(--dark-blue);
@@ -68,20 +73,51 @@ section.landing-text {
   gap: 1em;
 }
 
-input.inputs {
+input.inputs,
+.register-btn-submit {
   width: 100%;
-  background-color: white;
   border: 1px solid lightgray;
-  border-radius: 0.5em;
+  border-radius: 0.7em;
   padding: 1.2em;
   outline: none;
 }
 
 input.inputs::placeholder {
-  color: var(--dark-blue-);
+  color: var(--dark-blue);
   font-weight: 600;
 }
 
+.register-btn-submit {
+  border: 0;
+  background-color: var(--green);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0.3em 0 hsl(154, 59%, 41%);
+  cursor: pointer;
+}
+
+.text-small {
+  font-size: 0.8em;
+}
+
+.center {
+  text-align: center;
+}
+
+.grayish-blue {
+  color: var(--grayish-blue);
+}
+
+.red {
+  color: var(--red);
+}
+
+a:is(:active, :link, :visited) {
+  text-decoration: none;
+  font-weight: 600;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
