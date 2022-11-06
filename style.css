@@ -100,6 +100,11 @@ input.inputs::placeholder {
   font-weight: 600;
 }
 
+input:focus:invalid {
+  border: 1px solid var(--red);
+  background: url("./images/icon-error.svg") no-repeat 95%;
+}
+
 .register-btn-submit {
   border: 0;
   background-color: var(--green);
