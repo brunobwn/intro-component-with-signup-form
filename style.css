@@ -29,7 +29,7 @@ body {
 }
 
 main {
-  width: 100%;
+  max-width: 100%;
   min-height: calc(100vh - 3em);
   display: flex;
   flex-direction: column;
@@ -45,6 +45,10 @@ section.landing-text {
   margin-bottom: 3em;
 }
 
+.landing-text h1 {
+  font-size: clamp(2em, 10vw, 5em);
+}
+
 .trial-btn {
   width: 100%;
   padding: 1.5em;
@@ -56,11 +60,12 @@ section.landing-text {
   cursor: pointer;
   box-shadow: 0 0.5em 00 rgba(0, 0, 0, 0.15);
   margin-bottom: 2em;
+  font-size: 1em;
 }
 
 .form-container {
   background-color: white;
-  width: 100%;
+  max-width: 100%;
   padding: 1.5em;
   border-radius: 0.7em;
   box-shadow: 0 0.5em 00 rgba(0, 0, 0, 0.15);
