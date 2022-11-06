@@ -3,7 +3,9 @@
 :root {
   --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
+  --green-lighter: hsl(154, 59%, 61%);
   --blue: hsl(248, 32%, 49%);
+  --blue-darker: hsl(248, 32%, 39%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
 }
@@ -42,16 +44,16 @@ section.landing-text {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .landing-text h1 {
-  font-size: clamp(2em, 10vw, 5em);
+  font-size: clamp(2em, 5vw, 4em);
 }
 
 .trial-btn {
   width: 100%;
-  padding: 1.5em;
+  padding: 1em 3em;
   background-color: var(--blue);
   color: white;
   outline: none;
@@ -61,6 +63,12 @@ section.landing-text {
   box-shadow: 0 0.5em 00 rgba(0, 0, 0, 0.15);
   margin-bottom: 2em;
   font-size: 1em;
+  line-height: 1.5em;
+  transition: background-color 0.3s ease;
+}
+
+.trial-btn:hover {
+  background-color: var(--blue-darker);
 }
 
 .form-container {
@@ -101,6 +109,11 @@ input.inputs::placeholder {
   letter-spacing: 1px;
   box-shadow: 0 0.3em 0 hsl(154, 59%, 41%);
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn-submit:hover {
+  background-color: var(--green-lighter);
 }
 
 .text-small {
