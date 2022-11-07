@@ -90,7 +90,7 @@ input.inputs,
 .register-btn-submit {
   width: 100%;
   border: 1px solid lightgray;
-  border-radius: 0.7em;
+  border-radius: 0.5em;
   padding: 1.2em;
   outline: none;
 }
@@ -100,9 +100,13 @@ input.inputs::placeholder {
   font-weight: 600;
 }
 
-input:focus:invalid {
-  border: 1px solid var(--red);
+.input-invalid {
+  border: 1px solid var(--red) !important;
   background: url("./images/icon-error.svg") no-repeat 95%;
+}
+
+fieldset {
+  border: 0;
 }
 
 .register-btn-submit {
@@ -135,6 +139,20 @@ input:focus:invalid {
 
 .red {
   color: var(--red);
+}
+
+.input-validate {
+  font-size: 0.7em;
+  text-align: right;
+  font-weight: 600;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
 }
 
 a:is(:active, :link, :visited) {
