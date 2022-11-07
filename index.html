@@ -27,34 +27,54 @@
         </button>
         <div class="form-container">
           <form action="#register" class="register-form">
-            <input
-              type="text"
-              class="inputs"
-              name="first-name"
-              alt="First Name"
-              placeholder="First Name"
-              required />
-            <input
-              type="text"
-              class="inputs"
-              name="last-name"
-              alt="Last Name"
-              placeholder="Last Name"
-              required />
-            <input
-              type="email"
-              class="inputs"
-              name="email"
-              alt="Email Address"
-              placeholder="Email Address"
-              required />
-            <input
-              type="password"
-              class="inputs"
-              name="password"
-              alt="Password"
-              placeholder="Password"
-              required />
+            <fieldset>
+              <input
+                type="text"
+                class="inputs input-invalid"
+                name="first-name"
+                alt="First Name"
+                placeholder="First Name"
+                required />
+              <span class="input-validate red display-block"
+                >First Name cannot be empty</span
+              >
+            </fieldset>
+            <fieldset>
+              <input
+                type="text"
+                class="inputs"
+                name="last-name"
+                alt="Last Name"
+                placeholder="Last Name"
+                required />
+              <span class="input-validate red display-none"
+                >Last Name cannot be empty</span
+              >
+            </fieldset>
+            <fieldset>
+              <input
+                type="email"
+                class="inputs"
+                name="email"
+                alt="Email Address"
+                placeholder="Email Address"
+                required />
+              <span class="input-validate red display-none"
+                >Email cannot be empty</span
+              >
+            </fieldset>
+            <fieldset>
+              <input
+                type="password"
+                class="inputs"
+                name="password"
+                alt="Password"
+                placeholder="Password"
+                required />
+              <span class="input-validate red display-none"
+                >Looks like this is not an email</span
+              >
+            </fieldset>
             <button class="register-btn-submit" type="submit">
               Claim your free trial
             </button>
