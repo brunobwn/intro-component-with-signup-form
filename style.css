@@ -24,6 +24,8 @@ body {
 }
 
 body {
+  display: grid;
+  place-items: center;
   background-color: var(--red);
   background-image: url("/images/bg-intro-mobile.png");
   background-position: center;
@@ -33,14 +35,12 @@ body {
 
 main {
   max-width: 40rem;
-  min-height: calc(100vh - 3em);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
 }
 
-section.landing-text {
+.landing-text {
   color: white;
   text-align: center;
   display: flex;
@@ -88,7 +88,7 @@ section.landing-text {
   gap: 1em;
 }
 
-input.inputs,
+.inputs,
 .register-btn-submit {
   width: 100%;
   border: 1px solid lightgray;
@@ -97,7 +97,7 @@ input.inputs,
   outline: none;
 }
 
-input.inputs::placeholder {
+.inputs::placeholder {
   color: var(--dark-blue);
   font-weight: 600;
 }
@@ -158,28 +158,33 @@ a:is(:active, :link, :visited) {
   font-weight: 500;
 }
 
+footer {
+  align-self: end;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
+  margin-top: 2rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: white;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 1440px) {
   body {
-    display: grid;
-    place-items: center;
-    /* padding: clamp(5em, 10vw, 20em); */
+    background-image: url("/images/bg-intro-desktop.png");
+    background-size: cover;
   }
 
   main {
+    align-self: end;
     max-width: 70rem;
-    min-height: 100%;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    margin: 0 auto;
   }
 
   .wrapper {
@@ -187,6 +192,7 @@ a:is(:active, :link, :visited) {
     flex-direction: column;
   }
   .landing-text {
+    margin-bottom: 0;
     padding: 4em;
     text-align: left !important;
   }
@@ -197,5 +203,9 @@ a:is(:active, :link, :visited) {
   .landing-text,
   .wrapper {
     justify-content: center;
+  }
+
+  .attribution {
+    margin-top: 0;
   }
 }
