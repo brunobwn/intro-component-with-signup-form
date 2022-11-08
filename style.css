@@ -13,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
@@ -31,11 +32,12 @@ body {
 }
 
 main {
-  max-width: 100%;
+  max-width: 40rem;
   min-height: calc(100vh - 3em);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 
 section.landing-text {
@@ -48,7 +50,7 @@ section.landing-text {
 }
 
 .landing-text h1 {
-  font-size: clamp(2em, 5vw, 4em);
+  font-size: clamp(2em, 5vw, 3.5em);
 }
 
 .trial-btn {
@@ -105,10 +107,6 @@ input.inputs::placeholder {
   background: url("./images/icon-error.svg") no-repeat 95%;
 }
 
-fieldset {
-  border: 0;
-}
-
 .register-btn-submit {
   border: 0;
   background-color: var(--green);
@@ -157,12 +155,47 @@ fieldset {
 
 a:is(:active, :link, :visited) {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: grid;
+    place-items: center;
+    /* padding: clamp(5em, 10vw, 20em); */
+  }
+
+  main {
+    max-width: 70rem;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing-text {
+    padding: 4em;
+    text-align: left !important;
+  }
+  .landing-text p {
+    font-size: 1.1em;
+  }
+
+  .landing-text,
+  .wrapper {
+    justify-content: center;
+  }
 }
