@@ -27,18 +27,15 @@
           <b>Try it free 7 days</b> then $20/mo. thereafter
         </button>
         <div class="form-container">
-          <form action="#register" class="register-form">
+          <form onsubmit="register(event)" action="" class="register-form">
             <fieldset>
               <input
                 type="text"
-                class="inputs input-invalid"
+                class="inputs"
                 name="first-name"
                 alt="First Name"
-                placeholder="First Name"
-                required />
-              <span class="input-validate red display-block"
-                >First Name cannot be empty</span
-              >
+                placeholder="First Name" />
+              <span class="input-validate red display-block"></span>
             </fieldset>
             <fieldset>
               <input
@@ -46,11 +43,8 @@
                 class="inputs"
                 name="last-name"
                 alt="Last Name"
-                placeholder="Last Name"
-                required />
-              <span class="input-validate red display-none"
-                >Last Name cannot be empty</span
-              >
+                placeholder="Last Name" />
+              <span class="input-validate red display-block"></span>
             </fieldset>
             <fieldset>
               <input
@@ -58,11 +52,8 @@
                 class="inputs"
                 name="email"
                 alt="Email Address"
-                placeholder="Email Address"
-                required />
-              <span class="input-validate red display-none"
-                >Email cannot be empty</span
-              >
+                placeholder="Email Address" />
+              <span class="input-validate red display-block"></span>
             </fieldset>
             <fieldset>
               <input
@@ -70,11 +61,8 @@
                 class="inputs"
                 name="password"
                 alt="Password"
-                placeholder="Password"
-                required />
-              <span class="input-validate red display-none"
-                >Looks like this is not an email</span
-              >
+                placeholder="Password" />
+              <span class="input-validate red display-block"></span>
             </fieldset>
             <button class="register-btn-submit" type="submit">
               Claim your free trial
